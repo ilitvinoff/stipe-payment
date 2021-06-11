@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'stripe_payment.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'templates',BASE_DIR / 'stripe_payment/templates/']
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,3 +125,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# STRIPE KEYS
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Ix82EBMXMpFLzuPJ6njHrQjbZi3ruyn7nJZ36VXaQebwfp1VWywyrVzaxCtTQPWmqiRBvFDAvyjqV3u0cjnqcyW00IfdfCnkU'
+STRIPE_SECRET_KEY = 'sk_test_51Ix82EBMXMpFLzuPLkSLbddQVedNVRHOOVU7XANOe5qs67X1dusomZsYdKmJP7GNDgNYMNDnQeoZRaDmDtlBRR4O00TmjCus79'

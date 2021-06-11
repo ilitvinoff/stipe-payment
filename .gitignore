@@ -1,2 +1,6 @@
 /stripe_venv/*
 /.idea/*
+/stripe_payment/__pycache__/*
+/payment/__pycache__/*
+/__pycache__/*
+/payment/migrations/__pycache__/*
